@@ -3,53 +3,53 @@
 <!-- ============================================ -->
 
 <section id="footer-1390">
-    <div class="cs-container">
-        <div class="cs-top">
-            <a aria-label="go back to home" class="cs-logo" href="">
-                <img class="cs-logo-img" loading="lazy" decoding="async" src="https://codestitch.app/frontend/images/logo-white.svg" alt="logo" width="209" height="40">
+    <div class="container">
+        <div class="top">
+            <a aria-label="go back to home" class="logo" href="">
+                <img class="logo-img" loading="lazy" decoding="async" src="/assets/svgs/logo1.svg" alt="logo" width="209" height="40">
             </a>
-            <ul class="cs-ul">
+            <ul class="ul">
                 {% set navPages = collections.all | eleventyNavigation %}
                 {% for entry in navPages %}
-                    <li class="cs-li">
-                        <a href="{{ entry.link }}" class="cs-link">{{ entry.key }}</a>
+                    <li class="li">
+                        <a href="{{ entry.url }}" class="link">{{ entry.key }}</a>
                     </li>
                 {% endfor %}
             </ul>
         </div>
-        <div class="cs-bottom">
+        <div class="bottom">
             <!--Social-->
-            <ul class="cs-social">
-                <li class="cs-social-li">
-                    <a href="{{ client.social.facebook }}" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+            <!-- <ul class="social">
+                <li class="social-li">
+                    <a href="{{ client.social.facebook }}" class="social-link" aria-label="facebook" target="_blank" rel="noopener">
+                        <img class="social-icon default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-                <li class="cs-social-li">
-                    <a href="{{ client.social.twitter }}" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                <li class="social-li">
+                    <a href="{{ client.social.twitter }}" class="social-link" aria-label="twitter" target="_blank" rel="noopener">
+                        <img class="social-icon default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-                <li class="cs-social-li">
-                    <a href="{{ client.social.instagram }}" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                <li class="social-li">
+                    <a href="{{ client.social.instagram }}" class="social-link" aria-label="instagram" target="_blank" rel="noopener">
+                        <img class="social-icon default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-                <li class="cs-social-li">
-                    <a href="{{ client.social.youtube }}" class="cs-social-link" aria-label="twitter" target="_blank" rel="noopener">
-                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                <li class="social-li">
+                    <a href="{{ client.social.youtube }}" class="social-link" aria-label="twitter" target="_blank" rel="noopener">
+                        <img class="social-icon default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-            </ul>
-            <span class="cs-copyright">
-                © Copyright 2023 -
-                <a href="" class="cs-copyright-link">CodeStitch</a>
+            </ul> -->
+            <span class="copyright">
+                © Copyright 2024 - 
+                <a href="" class="copyright-link">{{ client.name }}</a>
             </span>
-            <div class="cs-flex">
-                <a href="" class="cs-copyright-link">Privacy Policy</a>
-                <span class="cs-separater">|</span>
-                <a href="" class="cs-copyright-link">Terms of Use</a>
-            </div>
+            <!-- <div class="flex">
+                <a href="" class="copyright-link">Privacy Policy</a>
+                <span class="separater">|</span>
+                <a href="" class="copyright-link">Terms of Use</a>
+            </div> -->
         </div>
     </div>
 </section>

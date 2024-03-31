@@ -10,6 +10,7 @@
     position: relative;
     z-index: 1;
     /* prevents the topper line from causing an overflow */
+    overflow: hidden;
   }
   #hero .container {
     width: 100%;
@@ -30,7 +31,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    gap: 4rem;
     z-index: 1;
   }
   #hero .topper {
@@ -41,7 +41,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 0.25rem;
-    color: var(--primary);
+    color: var(--bodyTextColorWhite);
     gap: 0.5rem;
     position: relative;
   }
@@ -51,7 +51,7 @@
     line-height: 1em;
     /* 16px - 24px */
     margin: 0 0 2.5rem 0;
-    color: var(--secondary);
+    color: var(--bodyTextColorWhite);
     position: relative;
   }
   #hero p {
@@ -61,11 +61,21 @@
     /* 464px - 622px */
     margin: 0;
     margin-bottom: 2rem;
-    color: var(--secondary);
+    color: var(--bodyTextColorWhite);
   }
   #hero p span {
     font-weight: 700;
     color: var(--primary);
+  }
+  #hero .right {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    position: absolute;
+    z-index: -10;
+    transform: scale(1.5);
+    mix-blend-mode: overlay;
+    filter: brightness(0.4);
+    min-width: 500px;
   }
   #hero .right .image-group {
     display: grid;
@@ -79,31 +89,30 @@
     grid-column: 1;
     z-index: 10;
     position: relative;
-    top: -20px;
-    left: -20px;
+    top: -50px;
+    left: -50px;
   }
   #hero .right .middle {
     grid-column: 1/-1;
     grid-row: 1/4;
   }
   #hero .right .bottom-right {
-    position: relative;
     grid-row: 3;
     grid-column: 3;
     z-index: 10;
-    top: 20px;
-    left: 20px;
+    position: relative;
+    top: 50px;
+    left: 50px;
   }
   #hero .right .circle img {
     border: clamp(3px, 1rem, 10px) solid white;
-    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: none;
   }
   #hero .right .middle img {
     object-fit: cover;
-    border-radius: 400px;
     width: 100%;
     height: 100%;
   }
@@ -116,22 +125,28 @@
     gap: 0;
     align-items: start;
   }
-  #hero .content h1 {
-    -webkit-text-stroke: 6px var(--bodyTextColorWhite);
-    text-stroke: 6px var(--bodyTextColorWhite);
-    paint-order: stroke fill;
-  }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #hero .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: none;
+    gap: 2rem;
     justify-items: center;
+    align-items: center;
+  }
+  #hero .content h1,
+  #hero .content p {
+    color: var(--secondary);
   }
   #hero .right {
     width: auto;
+    grid-column: 2;
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    mix-blend-mode: unset;
+    filter: none;
   }
   #hero .right .image-group {
     width: 100%;
@@ -160,6 +175,7 @@
   #hero .right .image-group .circle img {
     border: 10px solid white;
     border-radius: 50%;
+    display: block;
   }
   #hero .right .image-group .middle img {
     border-radius: 400px;
@@ -577,7 +593,7 @@
     --br: 1rem;
     display: grid;
     grid-template-rows: 1fr 5fr;
-    grid-gap: 1rem;
+    gap: 1rem;
     width: 100%;
     max-width: 30rem;
   }

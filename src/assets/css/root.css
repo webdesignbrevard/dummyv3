@@ -1,60 +1,129 @@
 /*-- -------------------------- -->
-<---         Core Styles        -->
+<---		Core Styles		-->
 <--- -------------------------- -*/
-@media only screen and (min-width: 0rem) {
+:root {
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  --primary: #387ADF;
+  --primaryLight: #50C4ED;
+  --secondary: #333A73;
+  --secondaryLight: #333A73;
+  --headerColor: #5f3a3a;
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  --actionColor: #FBA834;
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+  --bodyFontFamily: 'Roboto', Arial, sans-serif;
+  --measure: 60ch;
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+}
+@media only screen and (min-width: 40em) {
   :root {
-    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #387ADF;
-    --primaryLight: #50C4ED;
-    --secondary: #333A73;
-    --secondaryLight: #333A73;
-    --headerColor: #5f3a3a;
-    --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
-    --actionColor: #FBA834;
-    /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-    --bodyFontFamily: 'Roboto', Arial, sans-serif;
-    /* roboto-regular - latin */
-    /* roboto-700 - latin */
-    /* roboto-900 - latin */
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
   }
-  @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/roboto-v30-latin-900.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/roboto-v30-latin-900.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+* {
+  max-inline-size: var(--measure);
+}
+html,
+body,
+div,
+header,
+section,
+nav,
+img,
+picture,
+main,
+ul,
+footer {
+  max-inline-size: none;
+}
+.max-inline-size\:measure {
+  max-inline-size: var(--measure);
+}
+.max-inline-size\:measure\/2 {
+  max-inline-size: calc(var(--measure) / 2);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  --stack-space: (24/16rem);
+}
+.stack > * + * {
+  margin-top: var(--stack-space, 1rem);
+}
+h1 {
+  font-size: var(--fs-800);
+}
+h2 {
+  font-size: var(--fs-700);
+}
+h3 {
+  font-size: var(--fs-600);
+}
+h4 {
+  font-size: var(--fs-500);
+}
+.text-small,
+small {
+  font-size: var(--fs-300);
+}
+li:not([class]),
+p:not([class]),
+ul:not([class]) {
+  max-width: 65ch;
+}
+@media only screen and (min-width: 0rem) {
   body {
     font-family: var(--bodyFontFamily);
+    font-size: var(--fs-400);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
   }
   *,
   *:before,
@@ -63,11 +132,9 @@
     box-sizing: border-box;
   }
   .title {
-    font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
-    max-width: 43.75rem;
     margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
@@ -81,6 +148,7 @@
     margin: 0;
     color: var(--bodyTextColor);
   }
+  .button,
   .button-solid {
     font-size: 1rem;
     font-weight: 700;
@@ -95,33 +163,22 @@
     padding: 0 1.5rem;
     border-radius: 50px;
     color: var(--bodyTextColorWhite);
-    background-color: var(--actionColor);
+    border: 3px solid var(--actionColor);
     display: inline-block;
     position: relative;
     z-index: 1;
     transition: color 0.3s;
   }
-  .button-solid:before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: #000;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
+  .button-solid {
+    background-color: var(--actionColor);
+    border: none;
   }
   .button-solid:hover {
-    color: #fff;
-  }
-  .button-solid:hover:before {
-    width: 100%;
+    filter: hue-rotate(200);
   }
 }
 /*-- -------------------------- -->
-<---     Mobile Navigation      -->
+<---	Mobile Navigation	-->
 <--- -------------------------- -*/
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
@@ -503,12 +560,15 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
+  ::root {
+    font-size: 18px ;
+  }
   #navigation .button-solid {
     display: block;
   }
 }
 /*-- -------------------------- -->
-<---     Navigation Dropdown    -->
+<---	Navigation Dropdown	-->
 <--- -------------------------- -*/
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
@@ -675,7 +735,7 @@
   }
 }
 /*-- -------------------------- -->
-<---     Desktop Navigation     -->
+<---	Desktop Navigation	-->
 <--- -------------------------- -*/
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -961,17 +1021,18 @@
   }
 }
 /*-- -------------------------- -->
-<---          Footer            -->
+<---		Footer			-->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #footer-1390 {
-    padding: var(--sectionPadding);
-    background-color: #1a1a1a;
+  #footer {
+    padding: clamp(3.75rem, 17.82vw, 16.25rem) 1rem clamp(3.75rem, 5.82vw, 4.25rem) 1rem;
+    background: #333a73;
+    background: linear-gradient(45deg, #333a73 0%, #387adf 100%);
     position: relative;
     z-index: 1;
   }
-  #footer-1390 .container {
+  #footer .container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
@@ -979,12 +1040,12 @@
     flex-direction: column;
     align-items: center;
   }
-  #footer-1390 .top {
+  #footer .top {
     width: 100%;
     margin-bottom: 2.5rem;
     /* 24px - 64px */
     padding-bottom: clamp(1.5rem, 5vw, 4rem);
-    border-bottom: 1px solid #484848;
+    border-bottom: 1px solid #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -992,7 +1053,7 @@
     /* 24px - 40px */
     gap: clamp(1.25rem, 4vw, 2.5rem);
   }
-  #footer-1390 .ul {
+  #footer .ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -1003,111 +1064,85 @@
     column-gap: clamp(1.5rem, 4vw, 2.25rem);
     row-gap: 0.5rem;
   }
-  #footer-1390 .li {
+  #footer .li {
     list-style: none;
   }
-  #footer-1390 .link {
+  #footer .link {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
-    color: #bababa;
+    color: #FFF;
     display: block;
     transition: color 0.3s;
   }
-  #footer-1390 .link:hover {
+  #footer .link:hover {
     color: var(--primary);
   }
-  #footer-1390 .logo {
+  #footer .logo {
     width: 100%;
     max-width: 13.0625rem;
     height: auto;
     display: block;
   }
-  #footer-1390 .logo-img {
+  #footer .logo-img {
     width: 100%;
     height: auto;
     display: block;
   }
-  #footer-1390 .bottom {
+  #footer .bottom {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
-  #footer-1390 .social {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  #footer-1390 .social-li {
-    list-style: none;
-  }
-  #footer-1390 .social-link {
-    width: 2rem;
-    height: 2rem;
-    background-color: #484848;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-  }
-  #footer-1390 .social-link:hover {
-    background-color: var(--primary);
-  }
-  #footer-1390 .social-link:hover .social-icon {
-    opacity: 1;
-    filter: grayscale(1) brightness(1000%);
-  }
-  #footer-1390 .social-icon {
-    width: 0.75rem;
-    height: auto;
-    opacity: 0.6;
-    display: block;
-    transition: opacity 0.3s;
-  }
-  #footer-1390 .copyright {
+  #footer .copyright {
     font-size: 1rem;
     line-height: 1.5em;
     margin: 0;
     color: #bababa;
     display: block;
   }
-  #footer-1390 .copyright-link,
-  #footer-1390 .separater {
+  #footer .copyright-link,
+  #footer .separater {
     font-size: 1rem;
     text-decoration: none;
     color: #bababa;
     transition: color 0.3s;
   }
-  #footer-1390 .copyright-link:hover,
-  #footer-1390 .separater:hover {
+  #footer .copyright-link:hover,
+  #footer .separater:hover {
     color: var(--primary);
   }
-  #footer-1390 .separater {
+  #footer .separater {
     margin: 0 1rem;
     display: inline-block;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #footer-1390 .top {
+  #footer {
+    overflow: hidden;
+  }
+  #footer .swoosh-footer {
+    transform: scaleX(2) rotate(180deg);
+    position: absolute;
+    top: -100px;
+    left: 0px;
+  }
+  #footer .top {
     align-items: flex-start;
   }
-  #footer-1390 .bottom {
+  #footer .bottom {
     flex-direction: row;
     justify-content: center;
   }
-  #footer-1390 .flex {
+  #footer .flex {
     margin: 0 auto;
   }
-  #footer-1390 .social {
+  #footer .social {
     /* sends it to the right in the 3rd position */
     order: 3;
   }

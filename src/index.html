@@ -4,63 +4,67 @@ description: "The main branch of the advanced starter kit. Contains a basic 11ty
 additional functionality. Similar to our Intermediate Kits."
 permalink: '/'
 eleventyNavigation:
-    key: 'Main'
-    order: '100'
+key: 'Main'
+order: '100'
 ---
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css">
+<link rel="stylesheet" href="/assets/css/local.css">
 {% endblock %}
 
 {% extends 'layouts/base.html' %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <section id="hero" >
-        <div class="container">
-            <div class="content">
-				<div class="left">
-					<span class="topper">For any small business need</span>
-					<h1 class="title">
-						Business Web Design & Development
-					</h1>
-					<p>
-						We guaranteed completely hand-coded websites with remarkable performance starting as low as <span>$150/mo</span> with <span>$0 down</span>.
-					</p>
-					<a href="" class="button-solid">LET'S CONNECT!</a>
+<section id="hero">
+	<div class="container max-inline-size:measure">
+		<div class="content">
+			<div class="left">
+				<span class="topper">For any small business need</span>
+				<h1 class="title">
+					Business Web Design & Development
+				</h1>
+				<p>
+					We guaranteed completely hand-coded websites with remarkable performance starting as low as
+					<span>$150/mo</span> with <span>$0 down</span>.
+				</p>
+				<a href="" class="button-solid">LET'S CONNECT!</a>
+
+			</div>
+			<div class="right">
+				<div class="image-group">
+					<picture class="picture top-left circle">
+						<source media="(max-width: 600px)" srcset="assets/images/tablet.jpg">
+						<source media="(min-width: 601px)" srcset="assets/images/tablet.jpg">
+						<img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/tablet.jpg"
+							alt="A person looking at images using a tablet." >
+					</picture>
+					<picture class="picture middle">
+						<source media="(max-width: 600px)" srcset="assets/images/desktop.jpg">
+						<source media="(min-width: 601px)" srcset="assets/images/desktop.jpg">
+						<img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/desktop.jpg"
+							alt="Someone on their computer browsing images" >
+					</picture>
+					<picture class="picture bottom-right circle">
+						<source media="(max-width: 600px)" srcset="assets/images/phone.jpg">
+						<source media="(min-width: 601px)" srcset="assets/images/phone.jpg">
+						<img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/phone.jpg"
+							alt="A hand holding a phone" >
+					</picture>
+
 
 				</div>
-				<div class="right">
-					<div class="image-group">
-						<picture class="picture top-left circle">
-							<source media="(max-width: 600px)" srcset="assets/images/tablet.jpg">
-							<source media="(min-width: 601px)" srcset="assets/images/tablet.jpg">
-						<img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/tablet.jpg" alt="A person looking at images using a tablet." width="200" height="200">
-						</picture>
-						<picture class="picture middle">
-							<source media="(max-width: 600px)" srcset="assets/images/desktop.jpg">
-							<source media="(min-width: 601px)" srcset="assets/images/desktop.jpg">
-						<img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/desktop.jpg" alt="Someone on their computer browsing images" width="400" height="600">
-						</picture>
-						<picture class="picture bottom-right circle">
-							<source media="(max-width: 600px)" srcset="assets/images/phone.jpg">
-							<source media="(min-width: 601px)" srcset="assets/images/phone.jpg">
-						<img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/phone.jpg" alt="A hand holding a phone" width="200" height="200">
-						</picture>
+			</div>
 
+		</div>
 
-					</div>
-				</div>
+	</div>
 
-            </div>
-        
-        </div>
-
-        <!-- Background Image -->
-        <!-- <picture class="background">
+	<!-- Background Image -->
+	<!-- <picture class="background">
             <source media="(max-width: 600px)"
             srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2-m.jpeg">
             <source media="(min-width: 601px)"
@@ -69,183 +73,237 @@ eleventyNavigation:
             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg" alt="meeting" width="1920"
             height="1200" aria-hidden="true">
         </picture> -->
-    </section>
+	<img class="swoosh" src="/assets/svgs/backgroundmask1.svg" aria-hidden="true" alt="">
+</section>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
 
-    <section>
-        <div class="container">
-            <div class="content">
-                <span class="topper">How it works</span>
-                <h2 class="title">What makes this kit special</h2>
-                <p class="text">
-                    Behind the kit is careful management of the file structure, such that all shared code lives in the "main" branch. Each feature then lives on a separate branch, allowing you to choose what capabilities the project requires.
-                </p>
-                <p class="text">
-                    Some files, namely "package.json", "package-lock.json", ".eleventy.js", and "_includes/base.html", require additions to them when merging new branches. Cloning the repo from a template loses all commit history, so conflicts will arise in these files. These can be resolved by ensuring all unique code is merged into the project.
-                </p>
-                <p class="text">
-                    As such, a basic knowledge of Git is required before using this kit, with a solid grasp of how to resolve merge conflicts strongly advisable. You are welcome to merge in feature branches at a later date, after building the project up, but this may result in more complicated merges.
-                </p>
-                <a href="" class="button-solid">Read More</a>
-            </div>
-            <div class="image-group">
-                <!--Large Image-->
-                <picture class="picture picture-large">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting.jpeg" alt="lab" width="334" height="380">
-                </picture>
-                <!--Small Image-->
-                <picture class="picture picture-small">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/business-meeting-women.jpeg" alt="lab" width="183" height="158">
-                </picture>
-            </div>
-        </div>
-    </section>
+<!-- ============================================ -->
+<!--                 list info                    -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                   Steps                      -->
-    <!-- ============================================ -->
+<section id="we-create">
+	<div class="container">
+		<div class="content">
+			<h2 class="title">We Create</h2>
+			<p class="info">Our expertise lies in crafting tailored web design and development solutions for small
+				businesses across the country for an affordable price and stress-free experience. Our focus on custom
+				websites means a core focus on optimization, ultimately driving more traffic to your website, where you
+				see more </p>
+			<ul>
+				<li>
 
-    <section id="steps-1172">
-        <div class="container">
-            <div class="content">
-                <span class="topper">Just a few steps before</span>
-                <h2 class="title">How To Get Started</h2>
-                <p class="text">
-                    As this kit relies on merging different branches to get started, we'll need to do a few things first to ensure this happens smoothly and nothing gets missed.
-                </p>
-            </div>
-            <ul class="card-group">
-                <li class="item">
-                    <picture class="picture">
-                        <img class="icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-git.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="h3">1. Merge Branches</h2>
-                    <p class="item-text">
-                        Merge the branches you need for the project via the CLI, using "git merge [BRANCH] --allow-unrelated-histories". Resolve any conflicts.
-                    </p>
-                </li>
+					<?xml version="1.0" encoding="utf-8"?>
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						x="0px" y="0px" viewBox="0 0 122.88 98.21" style="enable-background:new 0 0 122.88 98.21"
+						xml:space="preserve">
+						<g>
+							<path class="st0"
+								d="M49.11,35.13c7.2,5.16,18.74-0.38,23.28,8.6c1.2,2.38,1.46,5.64,0.38,8.23c-0.44,1.04-1.08,1.97-1.96,2.68 c-0.39,0.31-0.82,0.59-1.3,0.83c-5.92,2.94-12.1-1.17-15.37-6.14C51.13,44.75,49.82,39.04,49.11,35.13L49.11,35.13z M100.01,0H7.26 C3.27,0,0,3.27,0,7.26v77.78c0,3.99,3.27,7.26,7.26,7.26h72.36l-6.27-5.34H7.12c-0.56,0-1.05-0.21-1.42-0.59 c-0.37-0.37-0.59-0.87-0.59-1.42V20.33H5.08h96.79V50l5.4,4.38V7.26C107.27,3.27,104,0,100.01,0L100.01,0z M14.17,8.16 c-1.98,0-3.59,1.61-3.59,3.59c0,1.98,1.61,3.58,3.59,3.58c1.98,0,3.59-1.61,3.59-3.58C17.76,9.77,16.15,8.16,14.17,8.16L14.17,8.16 z M38.48,8.16c-1.98,0-3.59,1.61-3.59,3.59c0,1.98,1.6,3.58,3.59,3.58c1.98,0,3.59-1.61,3.59-3.58 C42.07,9.77,40.46,8.16,38.48,8.16L38.48,8.16z M26.33,8.16c-1.98,0-3.59,1.61-3.59,3.59c0,1.98,1.61,3.58,3.59,3.58 c1.98,0,3.59-1.61,3.59-3.58C29.91,9.77,28.31,8.16,26.33,8.16L26.33,8.16z M85.63,74.54c4.01-3.2,7.12-6.89,9.24-11.12l25.8,27.21 c1.95,1.84,3.05,3.41,1.42,6.23c-0.81,0.83-1.67,1.28-2.58,1.34c-0.9,0.06-1.85-0.26-2.84-0.98L85.63,74.54L85.63,74.54z M72.02,58.75c1.74-0.93,4.12-3.23,4.69-5.74l16.15,8.86c-2.33,4.64-5.3,8.61-9.37,11.43C79.24,67.6,76.86,64.16,72.02,58.75 L72.02,58.75z" />
+						</g>
+					</svg>
+					<h4>Custom Website Design</h4>
+					<p>
+						We offer bespoke websites tailored to our client’s unique needs and preferences.
+					</p>
+					<p>
+						No website builders or wordpress themes!
+					</p>
+				</li>
+				<li>
 
-                <li class="item">
-                    <picture class="picture">
-                        <img class="icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-install.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="h3">2. Install Dependencies</h2>
-                    <p class="item-text">
-                        Run "npm install" to install all the packages and plugins needed to make your super awesome website.
-                    </p>
-                </li>
-                <li class="item">
-                    <picture class="picture">
-                        <img class="icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-todo.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="h3">3. Check Off Todos</h2>
-                    <p class="item-text">
-                        Search the project for any instance of "CS-TODO". We've marked any actions that need to be taken to get your project up to speed ASAP.
-                    </p>
-                </li>
-                <li class="item">
-                    <picture class="picture">
-                        <img class="icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/adv-kit-code.svg" alt="icon" width="48" height="48">
-                    </picture>
-                    <h2 class="h3">4. Get Developing!</h2>
-                    <p class="item-text">If using the sass/less branch, you can move over the starter styles to get a headstart. Otherwise, clear all page data and styles, and begin!</p>
-                </li>
-            </ul>
-        </div>
-        <!--Tire Screech-->
-    </section>
+					<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 71.95 122.88" style="enable-background:new 0 0 71.95 122.88" xml:space="preserve">
+						<g>
+							<path class="st0"
+								d="M53.84,43.03l3.93,3.92c1.03,1.03,1.03,2.72,0,3.76l-3.16,3.16c0.87,1.63,1.54,3.38,1.96,5.23h4.09 c1.46,0,2.66,1.2,2.66,2.66v5.55c0,1.46-1.2,2.66-2.66,2.66h-4.47c-0.55,1.81-1.33,3.52-2.31,5.08l2.9,2.9 c1.03,1.03,1.03,2.72,0,3.76l-3.92,3.93c-1.03,1.03-2.72,1.03-3.76,0l-3.08-3.08v-6.88c3.35-2.85,5.48-7.09,5.48-11.83 c0-8.57-6.95-15.52-15.52-15.52l0,0l0,0c-8.57,0-15.52,6.95-15.52,15.52c0,4.29,1.74,8.18,4.56,10.99l-0.25,6.92l-2.9,2.9 c-1.03,1.03-2.72,1.03-3.76,0l-3.93-3.93c-1.03-1.03-1.03-2.72,0-3.76l3.16-3.16c-0.87-1.63-1.54-3.38-1.96-5.23h-4.09 c-1.45,0-2.65-1.2-2.65-2.66v-5.54c0-1.46,1.2-2.66,2.66-2.66h4.47c0.55-1.81,1.33-3.52,2.31-5.08l-2.9-2.9 c-1.03-1.03-1.03-2.72,0-3.76l3.93-3.92c1.03-1.03,2.72-1.03,3.76,0l3.16,3.16c1.63-0.87,3.38-1.54,5.23-1.96v-4.09 c0-1.45,1.2-2.65,2.66-2.65h5.55c1.46,0,2.66,1.2,2.66,2.66v4.46c1.81,0.55,3.52,1.33,5.08,2.31l2.9-2.9 C51.11,42,52.8,42,53.84,43.03L53.84,43.03L53.84,43.03L53.84,43.03L53.84,43.03z M12.81,0h46.33c3.53,0,6.72,1.44,9.05,3.76 c2.32,2.32,3.76,5.51,3.76,9.05v97.26c0,3.53-1.44,6.72-3.76,9.05c-2.32,2.32-5.52,3.76-9.05,3.76H12.81 c-3.53,0-6.72-1.44-9.05-3.76C1.44,116.79,0,113.6,0,110.06V12.81c0-3.53,1.44-6.72,3.76-9.05C6.17,1.35,9.4,0,12.81,0L12.81,0z M35.97,108.94c2.89,0,5.24,2.35,5.24,5.24c0,2.89-2.35,5.24-5.24,5.24c-2.89,0-5.24-2.35-5.24-5.24 C30.73,111.29,33.06,108.94,35.97,108.94L35.97,108.94L35.97,108.94L35.97,108.94L35.97,108.94z M3.68,104.91h64.58V16.1H3.68 V104.91L3.68,104.91L3.68,104.91L3.68,104.91z M29.1,69.59c-1.73-2.29-3.11-4.85-1.68-8.61c0.93-2.44,3.07-4.44,5.76-5.56 c-4.41,9.72,8.24,13.2,8.62,1.69c4.23,3.51,4.2,8.7,1.09,12.89c-1.47,1.98-1.86,3.1-2.18,4.23c-0.18,0.62-0.22,1.25-0.22,2.04 c0,1.07,0.04,4.99,0.1,8.26c-6.78,0-1.4,0-7.87,0c-0.06-3.06-0.12-6.76-0.19-7.73c-0.06-1-0.16-1.67-0.41-2.3 c-0.44-1.14-0.99-2.18-3.04-4.88V69.59L29.1,69.59L29.1,69.59L29.1,69.59z" />
+						</g>
+					</svg>
+					<h4>Mobile Focused Approach</h4>
+					<p>
+						Our mobile-first approach ensures your website not only looks stunning but also performs
+						seamlessly across a variety of devices and screen sizes.
+					</p>
+				</li>
+				<li>
 
-    <!-- ============================================ -->
-    <!--                Why Choose Us                 -->
-    <!-- ============================================ -->
+					<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 122.88 94.12" style="enable-background:new 0 0 122.88 94.12" xml:space="preserve">
+						<g>
+							<path class="st0"
+								d="M6.33,0h91.16c3.46,0,6.33,2.87,6.33,6.34v33.16c-1.96-0.71-4.03-1.2-6.16-1.45V11.91l0,0l0,0H6.08v54.41 h61.03c0.08,2.07,0.38,4.07,0.89,6H6.33C2.87,72.32,0,69.45,0,65.98V6.34C0,2.87,2.87,0,6.33,0L6.33,0L6.33,0z M95.86,45.36 c5.87,0,11.19,2.39,15.05,6.23c3.85,3.86,6.23,9.16,6.23,15.05c0,4.29-1.28,8.3-3.46,11.64l9.21,10.04l-6.35,5.81l-8.88-9.77 c-3.37,2.25-7.43,3.56-11.78,3.56c-5.87,0-11.19-2.39-15.04-6.23c-3.86-3.86-6.23-9.16-6.23-15.04c0-5.87,2.39-11.19,6.23-15.05 C84.67,47.73,89.98,45.36,95.86,45.36L95.86,45.36L95.86,45.36z M107.17,55.32c-2.89-2.89-6.9-4.69-11.31-4.69 c-4.41,0-8.42,1.8-11.31,4.69c-2.89,2.89-4.69,6.9-4.69,11.31c0,4.41,1.8,8.42,4.69,11.31c2.89,2.89,6.9,4.69,11.31,4.69 c4.41,0,8.42-1.8,11.31-4.69c2.89-2.89,4.69-6.9,4.69-11.31C111.86,62.22,110.07,58.22,107.17,55.32L107.17,55.32L107.17,55.32 L107.17,55.32z M59.05,53.48h10.69c-0.52,1.09-0.97,2.22-1.34,3.38h-9.34V53.48L59.05,53.48L59.05,53.48z M59.05,44.86h17.14 c-1.15,1.03-2.22,2.17-3.18,3.38H59.05V44.86L59.05,44.86L59.05,44.86z M77.81,29.57h4.73c0.25,0,0.42,0.17,0.42,0.42v9.29 c0,0.25-0.17,0.42-0.42,0.42h-4.73c-0.25,0-0.42-0.17-0.42-0.42v-9.29C77.38,29.82,77.55,29.57,77.81,29.57L77.81,29.57 L77.81,29.57L77.81,29.57z M59.56,23.91h4.73c0.25,0,0.42,0.17,0.42,0.43v15.04c0,0.25-0.17,0.42-0.42,0.42h-4.73 c-0.25,0-0.42-0.17-0.42-0.42V24.33C59.05,24.08,59.31,23.91,59.56,23.91L59.56,23.91L59.56,23.91L59.56,23.91L59.56,23.91z M68.68,20.7h4.73c0.25,0,0.42,0.17,0.42,0.42v18.25c0,0.25-0.17,0.42-0.42,0.42h-4.73c-0.25,0-0.42-0.17-0.42-0.42V21.12 C68.26,20.87,68.43,20.7,68.68,20.7L68.68,20.7L68.68,20.7L68.68,20.7z M33.2,40.72l14.36,0.25c0,5.15-2.53,9.88-6.76,12.76 L33.2,40.72L33.2,40.72L33.2,40.72L33.2,40.72z M31.76,38.27l-0.17-16.73v-1.1l1.1,0.08l0,0l0,0c1.35,0.08,2.7,0.34,3.97,0.68 c1.27,0.34,2.45,0.84,3.63,1.44c5.83,3.04,9.88,9.12,10.22,16.05l0.08,1.1h-1.1l-16.64-0.51h-0.93L31.76,38.27L31.76,38.27 L31.76,38.27L31.76,38.27z M33.62,22.56l0.17,14.7l14.62,0.42c-0.59-5.75-4.14-10.73-9.04-13.35c-1.01-0.51-2.11-0.93-3.21-1.27 C35.23,22.9,34.47,22.73,33.62,22.56L33.62,22.56L33.62,22.56L33.62,22.56z M30.33,39.88l8.19,14.19c-2.53,1.44-5.32,2.2-8.19,2.2 c-9.04,0-16.39-7.35-16.39-16.39c0-8.79,6.93-16.05,15.71-16.39L30.33,39.88L30.33,39.88L30.33,39.88L30.33,39.88z" />
+						</g>
+					</svg>
+					<h4>Analytics and Reporting</h4>
+					<p>
+						Implement robust analytics tools to track website performance, monitor user behavior, and
+						measure the effectiveness of your digital marketing efforts.
+					</p>
+				</li>
 
-    <section id="why-choose-1657">
-        <div class="container">
-            <div class="content">
-                <div class="flex">
-                    <span class="topper">CSS, LESS and SASS</span>
-                    <h2 class="title">Your favourite CSS syntaxes - all under one roof</h2>
-                </div>
-                <ul class="ul">
-                    <li class="li">
-                        <span class="number">CSS</span>
-                        <p class="li-text">
-                            If you prefer vanilla CSS, everything has already been set up for you. You shouldn't need to merge in the SASS and LESS branches, and the ./starter-styles folder can be deleted.
-                        </p>
-                    </li>
-                    <li class="li">
-                        <span class="number">LESS</span>
-                        <p class="li-text">
-                            If you want to use the LESS preprocessor, make sure the "less" branch has been merged to include the LESS processor. When all branches have been merged, you can find the kit styles in ./starter-styles. Copy these over to /assets/less, or delete them to start from scratch.
-                        </p>
-                    </li>
-                    <li class="li">
-                        <span class="number">SASS</span>
-                        <p class="li-text">
-                            Same as before - merge in the "sass" branch to include the SASS processor. Delete the ./starter-styles folder or copy over the SASS styles into /assets/sass to get a headstart on the project
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="wrapper">
-                <picture class="picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting12.jpg" alt="meeting" width="630" height="414">
-                </picture>
+			</ul>
 
-                <p class="review">
-                    <svg class="quote" preserveAspectRatio="none" viewBox="0 0 100 93" fill="none" xmlns="http://www.w3.org/2000/svg" preser>
-                        <g opacity=".4" clip-path="url(#a)" fill="var(--quoteColor)"><path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z"/></g>
-                        <defs>
-                            <clipPath id="a-1657"><path fill="#fff" transform="translate(0 .854)" d="M0 0h100v83.146H0z"/></clipPath>
-                        </defs>
-                    </svg>
-                    To minimise the number of merge conflicts, vanilla CSS for these introductory pages are supplied in /assets. Should you wish to carry over the starting kit styles, LESS and SASS versions are supplied outside of ./src
-                </p>
-            </div>
-        </div>
-    </section>
+		</div>
 
-    <!-- ============================================ -->
-    <!--             Side By Side Reverse             -->
-    <!-- ============================================ -->
+	</div>
 
-    <section id="sbsr-1309">
-        <div class="container">
-            <!-- Left Image Section -->
-            <div class="image-group">
-                <!--Floating Box-->
-                <div class="box">
-                    <span class="desc">Building a better website, together</span>
-                </div>
-                <!--Image-->
-                <picture class="picture">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="content">
-                <span class="topper">Help & Support</span>
-                <h2 class="title">Guidance every step of the way</h2>
-                <p class="text">Outside of a cool new feature, each branch comes with an introductory landing page (just like this one) and a branch-specific README. The landing page gives you a quick overview of the branch, with the README providing more technical details should you wish to expand.</p>
-                <p class="text">Additionally, all project-critical actions that need to be taken have a comment containing "CS-TODO". After merging in your branches, you can search the codebase for "CS-TODO", find the most important changes that need to be made, and action them effortlessly.</p>
-                <p class="text">Finally, if you are still stuck or find a bug in the kit, you can use the CTAs in the header to get directly in touch with the kit creators, or reach out to a community of hundreds of other developers.</p>
-                <p class="text">The kit continues to be supported going forward, with a complete set of tutorial videos and additional feature branches planned in the very near future. Follow our subreddit to stay up to date!</p>
-                <a class="button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-            </div>
-        </div>
-    </section>
+</section>
+
+<!-- ============================================ -->
+<!--                   side by side               -->
+<!-- ============================================ -->
+
+<section id="side-by-side">
+
+	<div class="container">
+		<div class="content">
+			<div class="left">
+				<h2 class="title">
+					<span>$0</span> Down.
+					<br>
+					<span>$150</span> Per Month.
+					<br>
+					9 Month Minimum Contract.
+				</h2>
+				<p>
+					Get your business’s web journey with a 5-page website for $0 down. Larger projects requiring
+					additional pages, our pricing is customized based on the scope of work, time required, and the
+					number of extra pages.
+				</p>
+				<p>You own your domain, content, listing, and profiles. Cancel or pause your subscription at <acronym
+						title="After your 9-month contract">anytime*</acronym> with no fees.</p>
+			</div>
+			<div class="right">
+				<ul>
+					<li>
+						<h4>24/7 support </h4>
+
+						<p class="item-text">
+							We offer quick and timely support for your website.
+						</p>
+					</li>
+
+					<li>
+						<h4>Hosting Prices Included</h4>
+
+						<p class="item-text">
+							No worrying about montly hosting costs, they're simply part of your monthly payments.
+						</p>
+					</li>
+					<li>
+						<h4>Unlimited Edits</h4>
+
+						<p class="item-text">
+							Need to make a small tweak or big change? Enjoy peace of mind knowing the site will look how
+							you need it to.
+						</p>
+					</li>
+					<li>
+						<h4>Website Analytics</h4>
+
+						<p class="item-text">
+							We set up Analytics to track website traffic and its sources to help discover key
+							demographics.
+						</p>
+					</li>
+					<li>
+						<h4>Website Analytics</h4>
+
+						<p class="item-text">
+							We set up Analytics to track website traffic and its sources to help discover key
+							demographics.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--Tire Screech-->
+</section>
+
+<!-- ============================================ -->
+<!--                Story                         -->
+<!-- ============================================ -->
+
+<section id="story">
+	<div class="container">
+		<div class="content-grid">
+		</div>
+	</div>
+</section>
+
+<!-- ============================================ -->
+<!--             price plans                      -->
+<!-- ============================================ -->
+
+<section id="price-plans">
+	<div class="container">
+		<div class="content">
+			<div class="price-card">
+				<p class="card-header">
+					Standard
+					<br>
+					<span>5-page website</span>
+				</p>
+				<div class="card-content">
+					<h2 class="title">
+						<span class="dollar">$</span>150 <span class="month">/month</span>
+					</h2>
+					<ul class="content-list">
+
+						<li>
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+							<p>24/7 Customer Support</p>
+						</li>
+						<li>
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+
+							<p>Hosting Included</p>
+						</li>
+						<li>
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+
+							<p>Unlimited Edits</p>
+						</li>
+						<li>
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+
+							<p>Hand-made designs</p>
+						</li>
+					</ul>
+					<a href="" class="button-solid">LET'S CONNECT!</a>
+				</div>
+			</div>
+			<div class="price-card">
+				<p class="card-header">
+					Included!
+				</p>
+				<div class="card-content">
+					<h2 class="title">
+						<span class="dollar">$</span>0
+					</h2>
+					<ul class="content-list">
+						<li>
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+
+							<p>Traffic Analytics</p>
+						</li>
+						<li>
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+
+							<p>Blog Feature</p>
+						</li>
+						<li>
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.88px" height="122.88px" viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M34.388,67.984c-0.286-0.308-0.542-0.638-0.762-0.981c-0.221-0.345-0.414-0.714-0.573-1.097 c-0.531-1.265-0.675-2.631-0.451-3.934c0.224-1.294,0.812-2.531,1.744-3.548l0.34-0.35c2.293-2.185,5.771-2.592,8.499-0.951 c0.39,0.233,0.762,0.51,1.109,0.827l0.034,0.031c1.931,1.852,5.198,4.881,7.343,6.79l1.841,1.651l22.532-23.635 c0.317-0.327,0.666-0.62,1.035-0.876c0.378-0.261,0.775-0.482,1.185-0.661c0.414-0.181,0.852-0.323,1.3-0.421 c0.447-0.099,0.903-0.155,1.356-0.165h0.026c0.451-0.005,0.893,0.027,1.341,0.103c0.437,0.074,0.876,0.193,1.333,0.369 c0.421,0.161,0.825,0.363,1.207,0.604c0.365,0.231,0.721,0.506,1.056,0.822l0.162,0.147c0.316,0.313,0.601,0.653,0.85,1.014 c0.256,0.369,0.475,0.766,0.652,1.178c0.183,0.414,0.325,0.852,0.424,1.299c0.1,0.439,0.154,0.895,0.165,1.36v0.23 c-0.004,0.399-0.042,0.804-0.114,1.204c-0.079,0.435-0.198,0.863-0.356,1.271c-0.16,0.418-0.365,0.825-0.607,1.21 c-0.238,0.377-0.518,0.739-0.832,1.07l-27.219,28.56c-0.32,0.342-0.663,0.642-1.022,0.898c-0.369,0.264-0.767,0.491-1.183,0.681 c-0.417,0.188-0.851,0.337-1.288,0.44c-0.435,0.104-0.889,0.166-1.35,0.187l-0.125,0.003c-0.423,0.009-0.84-0.016-1.241-0.078 l-0.102-0.02c-0.415-0.07-0.819-0.174-1.205-0.31c-0.421-0.15-0.833-0.343-1.226-0.575l-0.063-0.04 c-0.371-0.224-0.717-0.477-1.032-0.754l-0.063-0.06c-1.58-1.466-3.297-2.958-5.033-4.466c-3.007-2.613-7.178-6.382-9.678-9.02 L34.388,67.984L34.388,67.984z M61.44,0c16.96,0,32.328,6.883,43.453,17.987c11.104,11.125,17.986,26.493,17.986,43.453 c0,16.961-6.883,32.329-17.986,43.454C93.769,115.998,78.4,122.88,61.44,122.88c-16.961,0-32.329-6.882-43.454-17.986 C6.882,93.769,0,78.4,0,61.439C0,44.48,6.882,29.112,17.986,17.987C29.112,6.883,44.479,0,61.44,0L61.44,0z M96.899,25.981 C87.826,16.907,75.29,11.296,61.44,11.296c-13.851,0-26.387,5.611-35.46,14.685c-9.073,9.073-14.684,21.609-14.684,35.458 c0,13.851,5.611,26.387,14.684,35.46s21.609,14.685,35.46,14.685c13.85,0,26.386-5.611,35.459-14.685s14.684-21.609,14.684-35.46 C111.583,47.59,105.973,35.054,96.899,25.981L96.899,25.981z"/></g></svg>
+
+							<p>Hand-made designs</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 {% endblock %}
